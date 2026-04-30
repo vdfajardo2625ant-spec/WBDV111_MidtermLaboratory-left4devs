@@ -217,13 +217,60 @@ footer {
 }
 
 
-/* Simple Mobile Responsive */
-@media (max-width: 768px) {
-    .grid-container {
-        flex-direction: column;
-    }
-    
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Stack Nav Links */
     nav {
         flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo-text {
+        float: none;
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Stack Row Containers into Columns */
+    .front-container, 
+    .Dentist, 
+    .about-container {
+        flex-direction: column !important;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    /* Fix Image Scaling */
+    .image, .clinicfront {
+        width: 100%;
+    }
+
+    .image img, .clinicfront img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Adjust Headings for smaller screens */
+    .appoint-text h2, 
+    .front h2, 
+    .descrip h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Adjust Outer Containers */
+    .contact-container, 
+    .servcontainer {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
     }
 }
